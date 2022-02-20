@@ -179,7 +179,7 @@ header .header__text h1 {
 section .container .registration {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  padding: 30px 0;
 }
 section .container .registration .registration__webinar {
   width: 50%;
@@ -247,6 +247,11 @@ section .container .registration .registration__button p {
     align-items: center;
     margin-top: 20px;
   }
+  section .container .registration .registration__webinar {
+    width: 220px;
+    font-size: 18px;
+    height: 20px;
+  }
 }
 
 /* -------------------------------    Popup Window  ------------------------------------- */
@@ -311,34 +316,20 @@ footer {
 }
 footer .container .contacts {
   display: flex;
-  justify-content: space-around;
   font-family: "Gotham", sans-serif;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 footer .container .contacts .left__contacts {
   background-color: #f09e1f;
   color: #fff;
-  margin-bottom: 30px;
-  padding-right: 70px;
-  border-right: 2px solid #000;
-}
+  margin-right: 80px;
 
-@media (max-width: 767px) {
-  footer .container .contacts .left__contacts {
-    padding-right: 0px;
-    border-right: 0px solid #000;
-
-    background-color: #f09e1f;
-    color: #fff;
-    margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 2px solid #000;
-  }
 }
 
 footer .container .contacts .left__contacts h3 {
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
   font-size: 20px;
 }
 footer .container .contacts .left__contacts .contacts__icons ul {
@@ -354,40 +345,100 @@ footer .container .contacts .left__contacts .contacts__text {
   justify-content: center;
 }
 footer .container .contacts .left__contacts .contacts__text span {
-  padding: 0 20px;
+  padding-right: 20px;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.35px;
   white-space: nowrap;
 }
 footer .container .contacts .left__contacts .contacts__text span:nth-child(2) {
+  padding: 0px 20px;
   border-left: 2px solid #ce232b;
   border-right: 2px solid #ce232b;
 }
+footer .container .contacts .left__contacts .contacts__text span:nth-child(3) {
+  padding-right: 0px;
+  padding-left: 20px;
+}
 
+footer .container .contacts .divider {
+  background-color: rgba(23, 12, 5, 0);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.5),
+    inset 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
+  width: 3px;
+  height: 146px;
+  align-self: center;
+}
 footer .container .contacts .right__contacts {
   display: flex;
   background-color: #ac1f22;
-  border-right: 3px solid #000;
-  margin-bottom: 15px;
+  margin-left: 50px;
+
+}
+footer .container .contacts .right__contacts .contacts__avatar {
+  padding: 40px 35px 8px 0;
 }
 footer .container .contacts .right__contacts .contacts__connections {
   display: flex;
   flex-direction: column;
+  text-transform: uppercase;
 }
-footer .container .contacts .right__contacts .contacts__connections > div {
+footer
+  .container
+  .contacts
+  .right__contacts
+  .contacts__connections
+  .connect__text {
   display: flex;
   flex-direction: column;
+  padding: 25px 60px 10px 0;
+}
+footer
+  .container
+  .contacts
+  .right__contacts
+  .contacts__connections
+  .connect__text
+  span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
 }
 footer .container .contacts .right__contacts .social__icons ul {
   display: flex;
-  justify-content: center;
-  margin: 0 20px 20px 20px;
+  justify-content: space-between;
 }
-footer .container .contacts .right__contacts .social__icons ul  {
-  display: flex;
-  justify-content: center;
-  margin: 0 20px 20px 20px;
+@media (max-width: 1199px) {
+  footer .container .contacts {
+    justify-content:space-between;
+  }
+  footer .container .contacts .left__contacts {
+    margin: 20px 20px 30px 0;
+  }
+  footer .container .contacts .right__contacts {
+    margin: 20px 0 30px 20px;
+
+  }
+  footer .container .contacts .divider {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  footer .container .contacts {
+    justify-content:space-between;
+  }
+  footer .container .contacts .left__contacts {
+    margin: 20px 20px 30px 0;
+  }
+  footer .container .contacts .right__contacts {
+    margin: 20px 0 30px 20px;
+
+  }
+  footer .container .contacts .divider {
+    display: none;
+  }
 }
 footer .colors {
   width: 100%;
