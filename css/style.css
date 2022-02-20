@@ -1,4 +1,4 @@
-/* Global Styles */
+/*           -------------------------------- Global Styles ------------------------------------ */
 :root {
   --main-color: #32333b;
 }
@@ -29,13 +29,14 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
+/* Container for the page  */
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+/* Custom class for buttons  */
 .main-button {
   text-transform: uppercase;
   background-image: linear-gradient(
@@ -46,21 +47,21 @@ a {
   );
   color: #fff;
 }
-/* Small */
+/* Small Screen */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-/* Medium */
+/* Medium Screen */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-/* Large */
+/* Large Screen */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -90,21 +91,8 @@ a {
   align-items: center;
 }
 
-@media (max-width: 767px) {
-  .navbar .logo {
-    width: 100%;
-    height: 50px;
-  }
-}
-
 .navbar .main-nav {
   display: flex;
-}
-
-@media (max-width: 767px) {
-  .navbar .main-nav {
-    margin: auto;
-  }
 }
 
 .navbar .main-nav > li > a {
@@ -117,8 +105,15 @@ a {
   padding: 0 30px;
   overflow: hidden;
 }
-
+/*  Responsive Styles for Navbar Section  */
 @media (max-width: 767px) {
+  .navbar .logo {
+    width: 100%;
+    height: 50px;
+  }
+  .navbar .main-nav {
+    margin: auto;
+  }
   .navbar .main-nav > li > a {
     padding: 10px;
     font-size: 14px;
@@ -142,24 +137,18 @@ header .header__text {
   background-color: #000;
   opacity: 0.6;
   width: 100%;
-  /* height: 120px; */
-  /* display: flex; 
-  flex-direction: column; */
 }
 header .header__text h1 {
   font-size: 72px;
   font-weight: bold;
   color: #fff;
   text-align: center;
-  /* align-self: flex-end;
-  justify-self: flex-end; */
-
   background-clip: text;
   text-shadow: -1px 2px 5px rgba(0, 0, 0, 0.75);
   font-weight: 400;
   text-transform: uppercase;
 }
-
+/*  Responsive Styles for Header Section  */
 @media (max-width: 767px) {
   header .header {
     height: 350px;
@@ -175,12 +164,15 @@ header .header__text h1 {
 /* -------------------------------------- Registration Section Styles --------------------------- */
 .registration__section {
   background-color: #fff;
+  box-shadow: 0 4px 2px -2px gray;
 }
+/* Container of Registration Section  */
 section .container .registration {
   display: flex;
   justify-content: space-around;
   padding: 30px 0;
 }
+/* Left Side of the section --> webinar Section  */
 section .container .registration .registration__webinar {
   width: 50%;
 }
@@ -200,6 +192,8 @@ section .container .registration .registration__webinar p {
   font-size: 18px;
   font-weight: 500;
 }
+
+/* Right Side of the section --> Registration Section  */
 section .container .registration .registration__button {
   width: 50%;
   display: flex;
@@ -208,27 +202,17 @@ section .container .registration .registration__button {
 }
 section .container .registration .registration__button .registration__logo {
   padding: 10px;
-  fill: #000;
-  color: #000;
 }
 section .container .registration .registration__button button {
   width: 314px;
   height: 62px;
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    to top,
-    #1c2f1a 0%,
-    #1c6634 46%,
-    #1ca44a 100%
-  );
-  color: #fff;
 }
 section .container .registration .registration__button p {
   padding: 10px;
   font-weight: bold;
   margin-top: 10px;
 }
-
+/*  Responsive Styles for Registration Section  */
 @media (max-width: 767px) {
   section .container .registration {
     display: flex;
@@ -239,7 +223,6 @@ section .container .registration .registration__button p {
   section .container .registration .registration__webinar {
     width: 100%;
   }
-
   section .container .registration .registration__button {
     width: 100%;
     display: flex;
@@ -255,7 +238,6 @@ section .container .registration .registration__button p {
 }
 
 /* -------------------------------    Popup Window  ------------------------------------- */
-
 .bg-modal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
@@ -266,7 +248,6 @@ section .container .registration .registration__button p {
   justify-content: center;
   align-items: center;
 }
-
 .modal-contents {
   height: 450px;
   width: 500px;
@@ -277,7 +258,6 @@ section .container .registration .registration__button p {
   border-radius: 4px;
 }
 .bg-modal .modal-contents h1 {
-  /* background-color: var(--main-color); */
   width: 100%;
   padding: 10px;
   font-size: 42px;
@@ -285,8 +265,19 @@ section .container .registration .registration__button p {
 .bg-modal .modal-contents button {
   width: 220px;
   height: 40px;
+  margin-top: 20px; 
 }
-
+.bg-modal .modal-contents div  {
+}
+.bg-modal .modal-contents #error {
+  color: #ff3333;
+  display: none;
+}
+.bg-modal .modal-contents #completed {
+  color: #32CD32;
+  display: none;
+  font-weight: bold;
+}
 input {
   margin: 15px auto;
   display: block;
@@ -294,7 +285,9 @@ input {
   padding: 8px;
   border: 1px solid gray;
 }
-
+.bg-modal .modal-contents #number{
+  margin-bottom: 2px; 
+}
 .close {
   position: absolute;
   top: 0;
@@ -306,20 +299,24 @@ input {
 }
 
 .close:hover {
-  color: #666;
+  color: var(--main-color);
 }
-/* ------------------------------------------------- Footer Styles --------------------------------- */
 
+/* ------------------------------------------------- Footer Styles --------------------------------- */
 footer {
   background-color: #e8edf0;
   padding-top: 20px;
 }
+
+/* Container of Footer Section  */
 footer .container .contacts {
   display: flex;
   font-family: "Gotham", sans-serif;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
+
+/*  Responsive Styles for Registration Section  */
 footer .container .contacts .left__contacts {
   background-color: #f09e1f;
   color: #fff;
@@ -341,7 +338,6 @@ footer .container .contacts .left__contacts .contacts__icons li {
 }
 footer .container .contacts .left__contacts .contacts__text {
   display: flex;
-  background-color: #1c2f1a;
   justify-content: center;
 }
 footer .container .contacts .left__contacts .contacts__text span {
