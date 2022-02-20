@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
   --main-color: #32333b;
-  --blue: #1686d9
+  --blue: #1686d9;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -37,15 +37,15 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.main-button{
-    text-transform: uppercase;
-    background-image: linear-gradient(
-      to top,
-      #1c2f1a 0%,
-      #1c6634 46%,
-      #1ca44a 100%
-    );
-    color: #fff;
+.main-button {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to top,
+    #1c2f1a 0%,
+    #1c6634 46%,
+    #1ca44a 100%
+  );
+  color: #fff;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -196,8 +196,8 @@ section .container .registration .registration__webinar h1 {
   letter-spacing: -0.56px;
 }
 section .container .registration .registration__webinar p {
-    width: 80%;
-  margin-top: 20px; 
+  width: 80%;
+  margin-top: 20px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -230,81 +230,78 @@ section .container .registration .registration__button p {
 }
 
 @media (max-width: 767px) {
-    section .container .registration {
-        display: flex;
-        flex-direction: column; 
-        padding: 20px; 
-        margin: 20px; 
-        
-      }
-      section .container .registration .registration__webinar {
-        width: 100%; 
-      }
-
-      section .container .registration .registration__button {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px; 
-      }
+  section .container .registration {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
   }
+  section .container .registration .registration__webinar {
+    width: 100%;
+  }
+
+  section .container .registration .registration__button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
 
 /* -------------------------------    Popup Window  ------------------------------------- */
 
-
-
 .bg-modal {
-	background-color: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	display: none;
-	justify-content: center;
-	align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-contents {
-	height: 450px;
-	width: 500px;
-	background-color: white;
-	text-align: center;
-	padding: 20px;
-	position: relative;
-	border-radius: 4px;
+  height: 450px;
+  width: 500px;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-radius: 4px;
 }
-.bg-modal  .modal-contents h1{
-    /* background-color: var(--main-color); */
-    width: 100%; 
-    padding: 10px; 
-    font-size: 42px;
+.bg-modal .modal-contents h1 {
+  /* background-color: var(--main-color); */
+  width: 100%;
+  padding: 10px;
+  font-size: 42px;
 }
-.bg-modal  .modal-contents button{
-    width: 220px; 
-    height: 40px; 
+.bg-modal .modal-contents button {
+  width: 220px;
+  height: 40px;
 }
 
 input {
-	margin: 15px auto;
-	display: block;
-	width: 50%;
-	padding: 8px;
-	border: 1px solid gray;
+  margin: 15px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
 }
 
 .close {
-	position: absolute;
-	top: 0;
-	right: 10px;
-	font-size: 42px;
-	color: #333;
-	transform: rotate(45deg);
-	cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .close:hover {
-    color: #666;
+  color: #666;
 }
 /* ------------------------------------------------- Footer Styles --------------------------------- */
 
@@ -315,24 +312,38 @@ footer {
 footer .container .contacts {
   display: flex;
   justify-content: space-around;
-  font-family: 'Gotham', sans-serif;
-
+  font-family: "Gotham", sans-serif;
+  flex-wrap: wrap;
 }
-footer .container .contacts .left__contacts{
-    background-color: #f09e1f;
-  }
-footer .container .contacts .left__contacts h3{
-    margin-bottom: 40px; 
-    text-align: center;
+footer .container .contacts .left__contacts {
+  background-color: #f09e1f;
+  color: #fff;
+  margin-bottom: 30px;
+}
+footer .container .contacts .left__contacts h3 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 20px;
 }
 footer .container .contacts .left__contacts .contacts__icons ul {
-  display: flex;
-  justify-content: space-between;
+  display:flex;
+  justify-content: center;
+}
+footer .container .contacts .left__contacts .contacts__icons li {
+  margin: 0 20px 20px 20px;
 }
 footer .container .contacts .left__contacts .contacts__text {
   display: flex;
   background-color: #1c2f1a;
-  justify-content: space-between;
+  justify-content: center;
+}
+footer .container .contacts .left__contacts .contacts__text span {
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+footer .container .contacts .left__contacts .contacts__text span:nth-child(2) {
+  border-left: 2px solid #ce232b;
+  border-right: 2px solid #ce232b;
 }
 
 footer .container .contacts .right__contacts {
@@ -356,10 +367,9 @@ footer .colors {
   display: flex;
   justify-content: space-between;
 }
-footer .colors span{
-    background-color: #32333b;
-    width: 25%; 
-    
+footer .colors span {
+  background-color: #32333b;
+  width: 25%;
 }
 footer .colors :nth-child(1) {
   background-color: #104779;
@@ -374,18 +384,18 @@ footer .colors :nth-child(4) {
   background-color: #1b6634;
 }
 
-footer .policy{
-    height: 70px;
-background-color: #32333b;
-display: flex; 
-justify-content: center;
-align-items: center;
+footer .policy {
+  height: 70px;
+  background-color: #32333b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .policy p {
-color: #bebebe;
-font-family: Gotham;
-font-size: 14px;
-font-weight: 300;
-line-height: 24px;
-text-align: center;
+  color: #bebebe;
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
 }
