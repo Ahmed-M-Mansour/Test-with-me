@@ -260,6 +260,18 @@ section .container .registration .registration__button p {
 .bg-modal .modal-contents button {
   width: 220px;
   height: 40px;
+  margin-top: 20px; 
+}
+.bg-modal .modal-contents div  {
+}
+.bg-modal .modal-contents #error {
+  color: #ff3333;
+  display: none;
+}
+.bg-modal .modal-contents #completed {
+  color: #32CD32;
+  display: none;
+  font-weight: bold;
 }
 input {
   margin: 15px auto;
@@ -267,6 +279,9 @@ input {
   width: 50%;
   padding: 8px;
   border: 1px solid gray;
+}
+.bg-modal .modal-contents #number{
+  margin-bottom: 2px; 
 }
 .close {
   position: absolute;
@@ -298,20 +313,16 @@ footer .container .contacts {
 
 /*  Responsive Styles for Registration Section  */
 footer .container .contacts .left__contacts {
-  background-color: #f09e1f;
-  color: #fff;
   margin-bottom: 30px;
   padding-right: 70px;
   border-right: 2px solid #000;
+  color: #000;
 }
 
 @media (max-width: 767px) {
   footer .container .contacts .left__contacts {
     padding-right: 0px;
     border-right: 0px solid #000;
-
-    background-color: #f09e1f;
-    color: #fff;
     margin-bottom: 30px;
     padding-bottom: 25px;
     border-bottom: 2px solid #000;
@@ -332,7 +343,6 @@ footer .container .contacts .left__contacts .contacts__icons li {
 }
 footer .container .contacts .left__contacts .contacts__text {
   display: flex;
-  background-color: #1c2f1a;
   justify-content: center;
 }
 footer .container .contacts .left__contacts .contacts__text span {

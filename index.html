@@ -59,7 +59,7 @@
                     </p>
                     <p> Register today to hear why professionals just like you have
                         chosen to get certified and licensed to train B.A.N.K. </p>
-                </div>
+                </div> 
                 <div class="registration__button">
                     <div class="registration__logo">
                         <img src="/assets/images/logo.svg" alt="Logo">
@@ -76,12 +76,16 @@
         <div class="modal-contents">
             <div class="close">+</div>
             <h1>Registration</h1>
-            <form action="">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="email" placeholder="E-Mail">
-                <input type="number" placeholder="Phone Number">
-                <button class="main-button">register</button>
+            <form >
+                <input id="first__name" type="text" placeholder="First Name">
+                <input id="last__name" type="text" placeholder="Last Name">
+                <input id="email" type="email" placeholder="E-Mail">
+                <input id="number" type="number" placeholder="Phone Number">
+                <div >
+                    <span id="error"> Please Validate Your Inputs </span>
+                    <span id="completed"> All Done  </span>
+                </div>
+                <button id="button"class="main-button" type="submit">register</button>
             </form>
         </div>
     </div>
@@ -177,7 +181,7 @@
         </div>
 
     </footer>
-
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script src="app.js"></script>
 </body>
 
