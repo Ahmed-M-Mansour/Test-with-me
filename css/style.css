@@ -37,6 +37,16 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+.main-button{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      to top,
+      #1c2f1a 0%,
+      #1c6634 46%,
+      #1ca44a 100%
+    );
+    color: #fff;
+}
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -173,7 +183,6 @@ section .container .registration {
   padding: 30px;
 }
 section .container .registration .registration__webinar {
-  /* background-color: greenyellow; */
   width: 50%;
 }
 section .container .registration .registration__webinar h1 {
@@ -192,7 +201,6 @@ section .container .registration .registration__webinar p {
   font-weight: 500;
 }
 section .container .registration .registration__button {
-  /* background-color: brown; */
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -223,7 +231,21 @@ section .container .registration .registration__button p {
 /* -------------------------------    Popup Window  ------------------------------------- */
 
 
-
+.button {
+	background-color: var(--blue) ;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+}
+.button:hover {
+    background-color: white;
+    color: var(--blue) ;
+    border: 2px solid var(--blue) ;
+}
 
 .bg-modal {
 	background-color: rgba(0, 0, 0, 0.8);
