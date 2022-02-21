@@ -18,9 +18,7 @@ html {
 }
 h1,
 p {
-  font-family: "Asap", sans-serif;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 
 ul {
@@ -127,7 +125,7 @@ a {
 
 /* ---------------------------------------- Header Styles ---------------------------------------   */
 header .header {
-  background-image: url("../assets/images/main.png");
+  background-image: url("../assets/images/main-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
@@ -186,19 +184,21 @@ section .container .registration {
 /* Left Side of the section --> webinar Section  */
 section .container .registration .registration__webinar {
   width: 50%;
-  font-family: "Gotham", sans-serif;
 }
 section .container .registration .registration__webinar h1 {
-  width: 419px;
-  height: 21px;
+  
+  width: 500px;
   color: #000000;
   font-size: 28px;
   font-weight: 700;
   line-height: 31.01px;
   text-transform: uppercase;
   letter-spacing: -0.56px;
+  margin-bottom: 10px;
 }
 section .container .registration .registration__webinar p {
+  font-family: "Gotham", sans-serif;
+
   width: 80%;
   margin-top: 20px;
   font-size: 18px;
@@ -243,9 +243,8 @@ section .container .registration .registration__button p {
     margin-top: 20px;
   }
   section .container .registration .registration__webinar h1 {
-    width: 220px;
+    width: 270px;
     font-size: 18px;
-    height: 20px;
   }
 }
 

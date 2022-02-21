@@ -1,5 +1,14 @@
+// change Header Pic Once to improve the performance 
+
+window.onload=function(){
+	setTimeout(()=> {
+	const el = document.querySelector(".header");
+	el.style.backgroundImage = "url('./assets/images/main.png')";
+	}, 2000);
+
+};
 // Handle The Popup Window 
-document.getElementById("button").addEventListener("click", function () {
+document.getElementById("button-register").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "flex";
 });
 // Close The Popup Window 
