@@ -3,7 +3,7 @@
 window.onload=function(){
 	setTimeout(()=> {
 	const el = document.querySelector(".header");
-	el.style.backgroundImage = "url('./assets/images/main.png')";
+	el.style.backgroundImage = "url('./assets/images/main.webp')";
 	}, 2000);
 
 };
