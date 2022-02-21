@@ -2,6 +2,10 @@
 :root {
   --main-color: #32333b;
 }
+@font-face {
+  font-family: Swiss;
+  src: url("../assets/fonts/Swiss\ 721\ Black\ Condensed\ BT.ttf");
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -126,27 +130,33 @@ header .header {
   background-image: url("../assets/images/main.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 800px;
   position: relative;
 }
 
 header .header__text {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
   bottom: 40px;
   left: 0;
-  background-color: #000;
-  opacity: 0.6;
   width: 100%;
 }
+
 header .header__text h1 {
+
+  font-family: "Swiss", sans-serif;
   font-size: 72px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  background-clip: text;
-  text-shadow: -1px 2px 5px rgba(0, 0, 0, 0.75);
-  font-weight: 400;
   text-transform: uppercase;
+  line-height: 1.063;
+  font-weight: bold;
+  text-align: center;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 /*  Responsive Styles for Header Section  */
 @media (max-width: 767px) {
@@ -171,10 +181,12 @@ section .container .registration {
   display: flex;
   justify-content: space-around;
   padding: 30px 0;
+  flex-wrap: wrap;
 }
 /* Left Side of the section --> webinar Section  */
 section .container .registration .registration__webinar {
   width: 50%;
+  font-family: "Gotham", sans-serif;
 }
 section .container .registration .registration__webinar h1 {
   width: 419px;
@@ -230,7 +242,7 @@ section .container .registration .registration__button p {
     align-items: center;
     margin-top: 20px;
   }
-  section .container .registration .registration__webinar {
+  section .container .registration .registration__webinar h1 {
     width: 220px;
     font-size: 18px;
     height: 20px;
@@ -265,16 +277,14 @@ section .container .registration .registration__button p {
 .bg-modal .modal-contents button {
   width: 220px;
   height: 40px;
-  margin-top: 20px; 
-}
-.bg-modal .modal-contents div  {
+  margin-top: 20px;
 }
 .bg-modal .modal-contents #error {
   color: #ff3333;
   display: none;
 }
 .bg-modal .modal-contents #completed {
-  color: #32CD32;
+  color: #32cd32;
   display: none;
   font-weight: bold;
 }
@@ -285,8 +295,8 @@ input {
   padding: 8px;
   border: 1px solid gray;
 }
-.bg-modal .modal-contents #number{
-  margin-bottom: 2px; 
+.bg-modal .modal-contents #number {
+  margin-bottom: 2px;
 }
 .close {
   position: absolute;
@@ -318,10 +328,8 @@ footer .container .contacts {
 
 /*  Responsive Styles for Registration Section  */
 footer .container .contacts .left__contacts {
-  background-color: #f09e1f;
-  color: #fff;
+  color: #000;
   margin-right: 80px;
-
 }
 
 footer .container .contacts .left__contacts h3 {
@@ -339,9 +347,9 @@ footer .container .contacts .left__contacts .contacts__icons li {
 footer .container .contacts .left__contacts .contacts__text {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 footer .container .contacts .left__contacts .contacts__text span {
-  padding-right: 20px;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -352,10 +360,10 @@ footer .container .contacts .left__contacts .contacts__text span:nth-child(2) {
   padding: 0px 20px;
   border-left: 2px solid #ce232b;
   border-right: 2px solid #ce232b;
+  margin: 0 20px 0 20px;
 }
 footer .container .contacts .left__contacts .contacts__text span:nth-child(3) {
   padding-right: 0px;
-  padding-left: 20px;
 }
 
 footer .container .contacts .divider {
@@ -368,9 +376,9 @@ footer .container .contacts .divider {
 }
 footer .container .contacts .right__contacts {
   display: flex;
-  background-color: #ac1f22;
   margin-left: 50px;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 footer .container .contacts .right__contacts .contacts__avatar {
   padding: 40px 35px 8px 0;
@@ -408,34 +416,32 @@ footer .container .contacts .right__contacts .social__icons ul {
 }
 @media (max-width: 1199px) {
   footer .container .contacts {
-    justify-content:space-between;
+    justify-content: space-between;
   }
   footer .container .contacts .left__contacts {
     margin: 20px 20px 30px 0;
   }
   footer .container .contacts .right__contacts {
     margin: 20px 0 30px 20px;
-
   }
   footer .container .contacts .divider {
     display: none;
   }
 }
-@media (max-width: 1199px) {
+
+@media (max-width: 1000px) {
   footer .container .contacts {
-    justify-content:space-between;
+    justify-content: center;
+    align-items: center;
   }
   footer .container .contacts .left__contacts {
-    margin: 20px 20px 30px 0;
+    margin-bottom: 30px;
   }
   footer .container .contacts .right__contacts {
-    margin: 20px 0 30px 20px;
-
-  }
-  footer .container .contacts .divider {
-    display: none;
+    margin: 0;
   }
 }
+
 footer .colors {
   width: 100%;
   height: 10px;
@@ -469,7 +475,7 @@ footer .policy {
 }
 footer .policy p {
   color: #bebebe;
-  font-family: Gotham;
+  font-family: "Gotham", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
